@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>숫자 맞추기 게임</h1>
-    <div id="result-area">결과가 나옴</div>
-    <input type="number" id="userInput">
-    <button id="play-button">Go Choose!</button>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <h1>숫자 맞추기 게임</h1>
+      <div id="result-area">결과가 나옵니다</div>
+      <div id="chances-area">남은 기회: 5</div>
+      <div class="input-container">
+        <input
+          type="number"
+          id="userInput"
+          placeholder="1에서 100 사이의 숫자"
+          required
+        />
+        <span></span>
+      </div>
+      <div>
+        <a
+          title="Button push lightblue"
+          class="button btnPush btnLightBlue"
+          id="play-button"
+          >숫자 입력</a
+        >
+        <a
+          title="Button push lightblue"
+          class="button btnPush btnLightBlue"
+          id="reset-button"
+          >리셋하기</a
+        >
+      </div>
+    </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

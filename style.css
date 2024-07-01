@@ -1,0 +1,112 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  
+}
+
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  position: relative;
+  width: 300px;
+  margin: 20px 0 20px;
+}
+
+input {
+  font-size: 15px;
+  color: #222222;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  text-align: center;
+  background: none;
+  z-index: 5;
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaaaaa;
+  transition: opacity 0.3s ease-out;
+}
+
+input:focus::placeholder,
+input:valid::placeholder {
+  opacity: 0;
+}
+
+span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: #666;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+input:focus ~ span,
+input:valid ~ span {
+  width: 100%;
+}
+
+/* 버튼 디자인 */
+a,
+a:visited {
+  text-decoration: none;
+  color: #00ae68;
+}
+a.button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 120px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.btnLightBlue.btnPush {
+  box-shadow: 0px 5px 0px 0px #1e8185;
+}
+.btnPush:hover {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.btnLightBlue {
+  background: #5dc8cd;
+}
+.btnLightBlue.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #1e8185;
+}
