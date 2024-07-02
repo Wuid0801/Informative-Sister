@@ -81,3 +81,15 @@ function reset() {
 pickRandomNum();
 
 console.log(computerNum); 
+
+// 배경 
+// Online Tutorials 강의중 하나입니다
+
+let numbers =document.querySelector('.numbers'); // . 안붙이면 에러 TypeError: Cannot read properties of null
+let numString=numbers.textContent;
+let splitNum = numString.split("");
+
+numbers.textContent ="";
+for(let i=0;i<splitNum.length;i++){
+    numbers.innerHTML += "<span>"+splitNum[i]+"</span>"
+}

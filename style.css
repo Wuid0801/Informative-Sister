@@ -1,9 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
 }
 
 body {
@@ -20,10 +25,9 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 300px;
-  
+  width: 350px;
+  z-index: 1;
 }
-
 
 h1 {
   color: #333;
@@ -32,7 +36,7 @@ h1 {
 
 .input-container {
   position: relative;
-  width: 300px;
+  width: 200px;
   margin: 20px 0 20px;
 }
 
@@ -58,7 +62,7 @@ input:valid::placeholder {
   opacity: 0;
 }
 
-span {
+.input-border {
   display: block;
   position: absolute;
   bottom: 0;
@@ -77,6 +81,11 @@ input:valid ~ span {
 }
 
 /* 버튼 디자인 */
+.button-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 a,
 a:visited {
   text-decoration: none;
@@ -109,4 +118,40 @@ a.button {
 }
 .btnLightBlue.btnPush:hover {
   box-shadow: 0px 0px 0px 0px #1e8185;
+}
+
+/* 배경 */
+section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  background: #222222;
+}
+.numbers {
+  position: relative;
+  cursor: default;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.numbers span {
+  position: relative;
+  font-size: 3em;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 0.9em;
+  transition: 1s;
+  user-select: none;
+}
+.numbers span:hover {
+  transition: 0s;
+  color: #fff;
+  text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0,
+    0 0 160px #0f0;
 }
