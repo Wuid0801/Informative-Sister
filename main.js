@@ -21,6 +21,7 @@ let userHistory = [];
 
 playButton.addEventListener("click", play);
 resetButton.addEventListener("click", reset);
+userInput.addEventListener("focus", () => userInput.value = "");
 
 function updateChances() {
     chancesArea.textContent = `남은 기회: ${chances}`;
